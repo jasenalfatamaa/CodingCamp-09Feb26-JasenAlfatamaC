@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Project Website</title>
+    <title>SPESSOLVE | Simple Landing Page</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <header>
         <div class="logo">
-            <img src="https://via.placeholder.com/50" alt="Logo">
+            <h2 style="color: #85A947; font-family: 'Merriweather', serif;">SPESSOLVE</h2>
         </div>
         <nav>
             <ul>
-                <li><button onclick="document.getElementById('home-section').scrollIntoView({behavior: 'smooth'})">Home</button></li>
-                <li><button onclick="document.getElementById('profile-section').scrollIntoView({behavior: 'smooth'})">Our Profile</button></li>
-                <li><button onclick="document.getElementById('portfolio-section').scrollIntoView({behavior: 'smooth'})">Portfolio</button></li>
-                <li><button onclick="document.getElementById('message-section').scrollIntoView({behavior: 'smooth'})">Message Us</button></li>
+                <li><button class="nav-btn active" data-target="home-section">Home</button></li>
+                <li><button class="nav-btn" data-target="profile-section">Our Profile</button></li>
+                <li><button class="nav-btn" data-target="portfolio-section">Portfolio</button></li>
+                <li><button class="nav-btn" data-target="message-section">Message Us</button></li>
             </ul>
         </nav>
     </header>
@@ -24,10 +26,21 @@
     <main>
         <!-- Home / Hero Section -->
         <section id="home-section" class="hero">
-            <h1>Hi <span id="name-display">User</span>, Welcome To Website</h1>
-            <p>ini adalah website latihan pertama</p>
+            <h1>Hi <span id="name-display"></span>, Welcome to <br><span style="color: #85A947;">SPESSOLVE</span></h1>
+            <p>The Architecture of Ambition</p>
             <div class="hero-image">
-                <img src="https://via.placeholder.com/800x300" alt="Banner Image">
+                <img src="https://via.placeholder.com/800x300/123524/EFE3C2?text=Spessolve+Banner"
+                    alt="Spessolve Banner">
+            </div>
+
+            <!-- Wave to Profile (#123524) -->
+            <div class="custom-shape-divider-bottom-16789">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
             </div>
         </section>
 
@@ -35,9 +48,23 @@
         <section id="profile-section" class="profile">
             <h2>Our Profile</h2>
             <div class="profile-content">
-                <p>We are a leading tech company focused on innovation and digital transformation. Our mission is to deliver high-quality software solutions that empower businesses to thrive in the digital age.</p>
-                <p><strong>Vision:</strong> To be the global leader in digital solutions.</p>
-                <p><strong>Mission:</strong> Providing excellent services with integrity and innovation.</p>
+                <p>Welcome to Spessolve. We are dedicated to constructing the architecture of ambition. Our solutions
+                    are designed to empower your digital presence and streamline your operations with cutting-edge
+                    technology.</p>
+                <p><strong>Vision:</strong> To architect the future of digital interaction.</p>
+                <p><strong>Mission:</strong> Delivering ambitious solutions with precision and elegance.</p>
+                <br>
+                <a href="https://spessolve.web.id/" target="_blank" class="visit-btn">Visit Spessolve Website</a>
+            </div>
+
+            <!-- Wave to Portfolio/Headquarter (#0f2e1f) -->
+            <div class="custom-shape-divider-bottom-16789">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z"
+                        class="shape-fill-alt"></path>
+                </svg>
             </div>
         </section>
 
@@ -58,6 +85,16 @@
                     <p>Surabaya</p>
                 </div>
             </div>
+
+            <!-- Wave to Message Us (#123524) -->
+            <div class="custom-shape-divider-bottom-16789">
+                <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                    preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
         </section>
 
         <!-- Message Us Section -->
@@ -69,12 +106,12 @@
                         <label for="name">Name</label>
                         <input type="text" id="name" name="name" placeholder="Enter your name">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="dob">Tanggal Lahir</label>
                         <input type="date" id="dob" name="dob">
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Jenis Kelamin</label>
                         <div class="radio-group">
@@ -82,12 +119,12 @@
                             <label><input type="radio" name="gender" value="Perempuan"> Perempuan</label>
                         </div>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="message">Pesan</label>
                         <textarea id="message" name="message" rows="4" placeholder="Enter your message"></textarea>
                     </div>
-                    
+
                     <button type="submit" class="submit-btn">Submit</button>
                     <div id="error-message" class="error"></div>
                 </form>
@@ -106,9 +143,20 @@
     </main>
 
     <footer>
-        <p>Created By RevoU</p>
+        <p>Created By SPESSOLVE</p>
     </footer>
+
+    <!-- Custom Name Modal -->
+    <div id="name-modal" class="modal-overlay">
+        <div class="modal-content">
+            <h3>Welcome!</h3>
+            <p>Please enter your name to continue:</p>
+            <input type="text" id="modal-name-input" placeholder="Your Name">
+            <button id="modal-submit-btn">Enter Website</button>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
+
 </html>
